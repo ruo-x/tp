@@ -8,7 +8,7 @@
         "about-us": "About Us",
         "project-team": "Project team",
         "john-doe": "John Doe",
-        "jane-doe": "Jane Doe",
+        "jordan-kang": "Jordan Kang",
         "zacharias-wong": "Zacharias Wong",
         "jean-doe": "Jean Doe",
         "james-doe": "James Doe"
@@ -140,6 +140,14 @@
       "title": "John Doe's Project Portfolio Page",
       "headings": {
         "project-addressbook-level-3": "Project: AddressBook Level 3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/jordankanghm.md",
+      "title": "Jordan Kang's Project Portfolio Page",
+      "headings": {
+        "project-ivolunteer": "Project: iVolunteer"
       },
       "headingKeywords": {}
     },
