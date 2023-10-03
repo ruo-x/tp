@@ -10,7 +10,7 @@
         "john-doe": "John Doe",
         "jordan-kang": "Jordan Kang",
         "zacharias-wong": "Zacharias Wong",
-        "jean-doe": "Jean Doe",
+        "lee-ruo-xuan": "Lee Ruo Xuan",
         "james-doe": "James Doe"
       },
       "headingKeywords": {}
@@ -146,6 +146,14 @@
     {
       "src": "team/jordankanghm.md",
       "title": "Jordan Kang's Project Portfolio Page",
+      "headings": {
+        "project-ivolunteer": "Project: iVolunteer"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/ruo-x.md",
+      "title": "Ruo Xuan's Project Portfolio Page",
       "headings": {
         "project-ivolunteer": "Project: iVolunteer"
       },
