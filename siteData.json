@@ -7,7 +7,7 @@
       "headings": {
         "about-us": "About Us",
         "project-team": "Project team",
-        "john-doe": "John Doe",
+        "brendan-koh": "Brendan Koh",
         "jordan-kang": "Jordan Kang",
         "zacharias-wong": "Zacharias Wong",
         "lee-ruo-xuan": "Lee Ruo Xuan",
@@ -133,6 +133,14 @@
       "title": "",
       "headings": {
         "addressbook-level-3": "AddressBook Level-3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/brein62.md",
+      "title": "Brendan Koh's Project Portfolio Page",
+      "headings": {
+        "project-ivolunteer": "Project: iVolunteer"
       },
       "headingKeywords": {}
     },
