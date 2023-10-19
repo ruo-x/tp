@@ -16,6 +16,7 @@ import seedu.address.logic.Logic;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.model.event.Event;
 
 /**
  * The Main Window. Provides the basic application layout containing
@@ -35,6 +36,7 @@ public class MainWindow extends UiPart<Stage> {
     private EventListPanel eventListPanel;
     private ResultDisplay resultDisplay;
     private HelpWindow helpWindow;
+    private EventWindow eventWindow;
 
     @FXML
     private StackPane commandBoxPlaceholder;
@@ -70,6 +72,7 @@ public class MainWindow extends UiPart<Stage> {
         setAccelerators();
 
         helpWindow = new HelpWindow();
+        eventWindow = new EventWindow();
     }
 
     public Stage getPrimaryStage() {
@@ -154,6 +157,20 @@ public class MainWindow extends UiPart<Stage> {
         }
     }
 
+    /**
+     * Opens the event window or focuses on it if it's already opened.
+     * @param event The event shown in the event window.
+     */
+    public void handleShowEvent(Event event) {
+        eventWindow.setEventToShow(event);
+
+        if (!eventWindow.isShowing()) {
+            eventWindow.show();
+        } else {
+            eventWindow.focus();
+        }
+    }
+
     void show() {
         primaryStage.show();
     }
@@ -191,6 +208,11 @@ public class MainWindow extends UiPart<Stage> {
 
             if (commandResult.isExit()) {
                 handleExit();
+            }
+
+            if (commandResult.isShowEvent()) {
+                Event eventToShow = commandResult.getEventToShow();
+                handleShowEvent(eventToShow);
             }
 
             return commandResult;

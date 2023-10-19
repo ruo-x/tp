@@ -114,6 +114,7 @@ public class ModelManager implements Model {
     public void deleteEvent(Event target) {
         eventStorage.removeEvent(target);
     }
+
     @Override
     public void addEvent(Event event) {
         eventStorage.addEvent(event);
