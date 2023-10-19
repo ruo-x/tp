@@ -59,7 +59,7 @@ public class CommandResult {
     }
 
     public Event getEventToShow() {
-        requireNonNull(eventToShow, "No event to show");
+        requireNonNull(eventToShow, "Event to show must not be null");
         return eventToShow;
     }
 
