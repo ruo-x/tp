@@ -40,7 +40,7 @@ public class EventShowCommandTest {
                 new CommandResult(
                         String.format(EventShowCommand.MESSAGE_SHOW_EVENT_SUCCESS,
                                 eventToShow.getEventName().eventName),
-                        false, false, true);
+                        false, false, true, false);
 
         ModelManager expectedModel = new ModelManager(model.getEventStorage(), model.getVolunteerStorage(),
                 new UserPrefs());
@@ -69,7 +69,7 @@ public class EventShowCommandTest {
         CommandResult expectedCommandResult = new CommandResult(
                 String.format(EventShowCommand.MESSAGE_SHOW_EVENT_SUCCESS,
                     eventToShow.getEventName().eventName),
-                false, false, true);
+                false, false, true, false);
 
         Model expectedModel = new ModelManager(model.getEventStorage(), model.getVolunteerStorage(), new UserPrefs());
 

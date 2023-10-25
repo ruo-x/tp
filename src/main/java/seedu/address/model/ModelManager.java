@@ -196,7 +196,7 @@ public class ModelManager implements Model {
     }
 
     @Override
-    public SortedList<Event> getSortedEventList() {
+    public ObservableList<Event> getSortedEventList() {
         sortedEvents = filteredEvents.filtered(PREDICATE_SHOW_ALL_EVENTS).sorted(Event::compareTo);
         lastShownEventList = sortedEvents;
         return sortedEvents;

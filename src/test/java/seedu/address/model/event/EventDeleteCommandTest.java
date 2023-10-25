@@ -30,7 +30,7 @@ public class EventDeleteCommandTest {
 
     @Test
     public void execute_validIndexUnfilteredList_success() {
-        Event eventToDelete = model.getFilteredEventList().get(INDEX_FIRST.getZeroBased());
+        Event eventToDelete = model.getLastShownEventList().get(INDEX_FIRST.getZeroBased());
         EventDeleteCommand eventDeleteCommand = new EventDeleteCommand(INDEX_FIRST);
 
         String expectedMessage = String.format(EventDeleteCommand.MESSAGE_DELETE_EVENT_SUCCESS,
@@ -45,7 +45,7 @@ public class EventDeleteCommandTest {
 
     @Test
     public void execute_invalidIndexUnfilteredList_throwsCommandException() {
-        Index outOfBoundIndex = Index.fromOneBased(model.getFilteredEventList().size() + 1);
+        Index outOfBoundIndex = Index.fromOneBased(model.getLastShownEventList().size() + 1);
         EventDeleteCommand eventDeleteCommand = new EventDeleteCommand(outOfBoundIndex);
 
         assertCommandFailure(eventDeleteCommand, model, Messages.MESSAGE_INVALID_EVENT_DISPLAYED_INDEX);
@@ -55,7 +55,7 @@ public class EventDeleteCommandTest {
     public void execute_validIndexFilteredList_success() {
         showEventAtIndex(model, INDEX_FIRST);
 
-        Event eventToDelete = model.getFilteredEventList().get(INDEX_FIRST.getZeroBased());
+        Event eventToDelete = model.getLastShownEventList().get(INDEX_FIRST.getZeroBased());
         EventDeleteCommand eventDeleteCommand = new EventDeleteCommand(INDEX_FIRST);
 
         String expectedMessage = String.format(EventDeleteCommand.MESSAGE_DELETE_EVENT_SUCCESS,
