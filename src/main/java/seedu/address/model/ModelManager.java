@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import seedu.address.commons.core.GuiSettings;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.model.event.Event;
@@ -25,7 +26,10 @@ public class ModelManager implements Model {
     private final UserPrefs userPrefs;
     private final FilteredList<Volunteer> filteredVolunteers;
     private final FilteredList<Event> filteredEvents;
+    private SortedList<Event> sortedEvents;
     private final FilteredList<Event> eventToShowList;
+
+    private ObservableList<Event> lastShownEventList;
 
     /**
      * Initializes a ModelManager with the given eventStorage, volunteerStorage and userPrefs.
@@ -43,6 +47,8 @@ public class ModelManager implements Model {
         filteredEvents = new FilteredList<>(this.eventStorage.getEventList());
         filteredVolunteers = new FilteredList<>(this.volunteerStorage.getVolunteerList());
         eventToShowList = new FilteredList<>(this.eventStorage.getEventList());
+        sortedEvents = new SortedList<>(this.eventStorage.getEventList());
+        lastShownEventList = null;
     }
 
     public ModelManager() {
@@ -167,6 +173,11 @@ public class ModelManager implements Model {
 
     //=========== Filtered Event List Accessors =============================================================
 
+    @Override
+    public ObservableList<Event> getLastShownEventList() {
+        return lastShownEventList;
+    }
+
     /**
      * Returns an unmodifiable view of the list of {@code Event} backed by the internal list of
      * {@code versionedEventStorage}
@@ -181,6 +192,14 @@ public class ModelManager implements Model {
         requireNonNull(predicate);
         filteredEvents.setPredicate(predicate);
         eventToShowList.setPredicate(predicate);
+        lastShownEventList = filteredEvents;
+    }
+
+    @Override
+    public SortedList<Event> getSortedEventList() {
+        sortedEvents = filteredEvents.filtered(PREDICATE_SHOW_ALL_EVENTS).sorted(Event::compareTo);
+        lastShownEventList = sortedEvents;
+        return sortedEvents;
     }
 
     /**

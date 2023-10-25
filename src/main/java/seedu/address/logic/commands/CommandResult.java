@@ -20,15 +20,17 @@ public class CommandResult {
     private final boolean exit;
 
     private final boolean showEvent;
+    private final boolean isSortEvents;
 
     /**
      * Constructs a {@code CommandResult} with the specified fields.
      */
-    public CommandResult(String feedbackToUser, boolean showHelp, boolean exit, boolean showEvent) {
+    public CommandResult(String feedbackToUser, boolean showHelp, boolean exit, boolean showEvent, boolean isSortEvents) {
         this.feedbackToUser = requireNonNull(feedbackToUser);
         this.showHelp = showHelp;
         this.exit = exit;
         this.showEvent = showEvent;
+        this.isSortEvents = isSortEvents;
     }
 
     /**
@@ -36,7 +38,12 @@ public class CommandResult {
      * and other fields set to their default value.
      */
     public CommandResult(String feedbackToUser) {
-        this(feedbackToUser, false, false, false);
+        this(feedbackToUser,
+                false,
+                false,
+                false,
+                false
+        );
     }
 
     public String getFeedbackToUser() {
@@ -55,6 +62,10 @@ public class CommandResult {
         return showEvent;
     }
 
+    public boolean isSortEvents() {
+        return isSortEvents;
+    }
+
     @Override
     public boolean equals(Object other) {
         if (other == this) {
@@ -70,12 +81,13 @@ public class CommandResult {
         return feedbackToUser.equals(otherCommandResult.feedbackToUser)
                 && showHelp == otherCommandResult.showHelp
                 && exit == otherCommandResult.exit
-                && showEvent == otherCommandResult.showEvent;
+                && showEvent == otherCommandResult.showEvent
+                && isSortEvents == otherCommandResult.isSortEvents;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(feedbackToUser, showHelp, exit, showEvent);
+        return Objects.hash(feedbackToUser, showHelp, exit, showEvent, isSortEvents);
     }
 
     @Override
@@ -85,6 +97,7 @@ public class CommandResult {
                 .add("showHelp", showHelp)
                 .add("exit", exit)
                 .add("showEvent", showEvent)
+                .add("isSortEvents", isSortEvents)
                 .toString();
     }
 

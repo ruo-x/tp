@@ -4,6 +4,7 @@ import java.nio.file.Path;
 import java.util.function.Predicate;
 
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.SortedList;
 import seedu.address.commons.core.GuiSettings;
 import seedu.address.model.event.Event;
 import seedu.address.model.volunteer.Volunteer;
@@ -81,6 +82,11 @@ public interface Model {
      */
     void setEvent(Event target, Event editedEvent);
 
+    /**
+     * Returns an unmodifiable view of the last shown event list.
+     */
+    ObservableList<Event> getLastShownEventList();
+
     /** Returns an unmodifiable view of the filtered event list */
     ObservableList<Event> getFilteredEventList();
 
@@ -89,6 +95,11 @@ public interface Model {
      * @throws NullPointerException if {@code predicate} is null.
      */
     void updateFilteredEventList(Predicate<Event> predicate);
+
+    /**
+     * Returns an unmodifiable view of the sorted event list.
+     */
+    SortedList<Event> getSortedEventList();
 
     /** Returns an unmodifiable view of the event to display in the event window */
     ObservableList<Event> getEventToShowList();

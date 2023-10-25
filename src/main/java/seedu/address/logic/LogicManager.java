@@ -75,6 +75,11 @@ public class LogicManager implements Logic {
     }
 
     @Override
+    public ObservableList<Event> getSortedEventList() {
+        return model.getSortedEventList();
+    }
+
+    @Override
     public ObservableList<Event> getEventToShowList() {
         return model.getEventToShowList();
     }

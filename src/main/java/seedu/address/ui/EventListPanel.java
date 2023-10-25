@@ -30,6 +30,15 @@ public class EventListPanel extends UiPart<Region> {
     }
 
     /**
+     * Sets the displayed event list to a new event list to display.
+     *
+     * @param newEventList New event list to display.
+     */
+    public void setNewEventList(ObservableList<Event> newEventList) {
+        eventListView.setItems(newEventList);
+    }
+
+    /**
      * Custom {@code ListCell} that displays the graphics of an {@code Event} using an {@code EventCard}.
      */
     class EventListViewCell extends ListCell<Event> {

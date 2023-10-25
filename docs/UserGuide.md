@@ -221,6 +221,12 @@ Restrictions:
 Examples:
 * `eshow 7` will result in a pop-up window appearing, listing all details of the event at id `7`. This includes its name, start date and time, end date and time, location, roles needed, logistics needed (if any), budget (if any), and a description.
 
+### Sorting all events by date: `esort`
+
+Volunteer coordinators can sort all events by their date and time, in ascending order, to see the few most upcoming events.
+
+Format: `esort`
+
 ### Deleting an event: `edelete`
 
 Deletes the event from the event list.
@@ -360,6 +366,7 @@ coming soon
 | **Create a new event**                        | `ecreate n/EVENT_NAME r/ROLES_NEEDED… d/DATE_AND_TIME l/LOCATION dsc/DESCRIPTION [m/MATERIALS_AND_LOGISTICS_NEEDED]... [b/BUDGET]` <br> e.g., `ecreate n/Fundraising at Orchard r/logistics leader d/23-09-2023 1500 dsc/station at locations to ask for donations m/50 tin cans b/50` |
 | **List all events**                           | `elist`                                                                                                                                                                                                                                                                                |
 | **Read an individual event**                  | `eshow EVENT_ID` <br> e.g., `eshow 8`                                                                                                                                                                                                                                                  |
+| **Sort all events by date and time**          | `esort`                                                                                                                                                                                                                                                                                |
 | **Delete an event**                           | `edelete EVENT_ID` <br> e.g., `edelete 3`                                                                                                                                                                                                                                              |
 | **Create a new volunteer profile**            | `vcreate vn/VOLUNTEER_NAME hp/PHONE_NUMBER e/EMAIL [s/SKILLS]...`<br> e.g.,`vcreate vn/John Lim hp/81234567 e/john123@gmail.com s/Cooking`                                                                                                                                             |
 | **List all volunteer profiles**               | `vlist`                                                                                                                                                                                                                                                                                |

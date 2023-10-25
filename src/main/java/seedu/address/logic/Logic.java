@@ -32,8 +32,13 @@ public interface Logic {
      */
     ReadOnlyEventStorage getEventStorage();
 
-    /** Returns an unmodifiable view of the filtered list of events */
+    /** Returns an unmodifiable view of the filtered list of events. */
     ObservableList<Event> getFilteredEventList();
+
+    /**
+     * Returns an unmodifiable view of the sorted list of all events.
+     */
+    ObservableList<Event> getSortedEventList();
 
     /** Returns an unmodifiable view of the event to display in event window */
     ObservableList<Event> getEventToShowList();
