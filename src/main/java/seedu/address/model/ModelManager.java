@@ -48,7 +48,7 @@ public class ModelManager implements Model {
         filteredVolunteers = new FilteredList<>(this.volunteerStorage.getVolunteerList());
         eventToShowList = new FilteredList<>(this.eventStorage.getEventList());
         sortedEvents = new SortedList<>(this.eventStorage.getEventList());
-        lastShownEventList = null;
+        lastShownEventList = filteredEvents;
     }
 
     public ModelManager() {

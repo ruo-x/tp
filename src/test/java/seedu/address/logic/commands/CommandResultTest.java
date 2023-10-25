@@ -65,7 +65,8 @@ public class CommandResultTest {
                 + "{feedbackToUser=" + commandResult.getFeedbackToUser()
                 + ", showHelp=" + commandResult.isShowHelp()
                 + ", exit=" + commandResult.isExit()
-                + ", showEvent=" + commandResult.isShowEvent() + "}";
+                + ", showEvent=" + commandResult.isShowEvent()
+                + ", isSortEvents=" + commandResult.isSortEvents() + "}";
         assertEquals(expected, commandResult.toString());
     }
 }
