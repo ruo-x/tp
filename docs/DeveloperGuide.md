@@ -770,11 +770,11 @@ Step 3. The `VolunteerFindCommand#execute()` method is called, and the filtered 
 
 The following sequence diagram shows how the vfind operation works:
 
-<puml src="diagrams/VolunteerFindSequenceDiagram.puml" width="400" />
+<puml src="diagrams/VolunteerFindSequenceDiagram.puml" alt="VolunteerFindSequenceDiagram" />
 
 Meanwhile, the activity diagram below shows the general workflow when a `VolunteerFindCommand` with a `n/` and `s/` prefix is executed:
 
-<puml src="diagrams/VolunteerFindActivityDiagram.puml" width="400" />
+<puml src="diagrams/VolunteerFindActivityDiagram.puml" alt="VolunteerFindActivityDiagram" />
 
 #### Design considerations:
 
