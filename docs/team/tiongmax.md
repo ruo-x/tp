@@ -35,7 +35,9 @@ Given below are my contributions to the project.
       , `eremovev`, `elistv`): [#52](https://github.com/AY2324S1-CS2103T-T14-4/tp/pull/52).
     * Added documentation for the event edit feature (`eedit`): [#203](https://github.com/AY2324S1-CS2103T-T14-4/tp/pull/203).
     * Added more details for documentation of find event feature: [#251](https://github.com/AY2324S1-CS2103T-T14-4/tp/pull/251).
-    
+
+  <div style="page-break-after: always;"></div>
+  
   * Developer Guide:
     * Added a list of user stories: [#65](https://github.com/AY2324S1-CS2103T-T14-4/tp/pull/65).
     * Added use cases for eaddv, eremovev, eedit and elistv: [#229](https://github.com/AY2324S1-CS2103T-T14-4/tp/pull/229).
