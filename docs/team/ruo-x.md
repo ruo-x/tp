@@ -19,7 +19,7 @@ Given below are my contributions to the project:
   * Highlights: Implementation of the pop-up window UI was manageable as I could gain some inspiration from the `HelpWindow` class given in our original code. On the other hand, obtaining the information of the event to display was a lot more challenging to implement. iVolunteer uses a Facade to separate the component internals and users of the component, so I had to come up with a way for the pop-up window to have access to the event to display. It required an in-depth analysis of design alternatives, and it took me numerous trial and error to finally decide on my implementation method. 
 To further improve on user experience, I have added the ability to close this pop-up window using the `ESC` key ([#130](https://github.com/AY2324S1-CS2103T-T14-4/tp/pull/130)).
 
-**<!-- force a page break -->
+<!-- force a page break -->
 <div style="page-break-before:always"></div> **
 
 * **New Feature**: Added the ability to sort all events in chronological order ([#120](https://github.com/AY2324S1-CS2103T-T14-4/tp/pull/120)).
