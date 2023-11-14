@@ -329,7 +329,7 @@ Format: `eshow EVENT_INDEX`
 
 <box type="tip" seamless>
 
-**Tip 1:** `eshow` does not display the volunteers assigned to the event. To do so, use the [elistv](#listing-all-volunteers-in-an-event--elistv) command instead.
+**Tip 1:** `eshow` does not display the volunteers assigned to the event. To do so, use the [elistv](#listing-all-volunteers-in-an-event-elistv) command instead.
 </box>
 
 <box type="tip" seamless>
