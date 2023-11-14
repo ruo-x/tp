@@ -19,8 +19,8 @@ Given below are my contributions to the project:
   * Highlights: Implementation of the pop-up window UI was manageable as I could gain some inspiration from the `HelpWindow` class given in our original code. On the other hand, obtaining the information of the event to display was a lot more challenging to implement. iVolunteer uses a Facade to separate the component internals and users of the component, so I had to come up with a way for the pop-up window to have access to the event to display. It required an in-depth analysis of design alternatives, and it took me numerous trial and error to finally decide on my implementation method. 
 To further improve on user experience, I have added the ability to close this pop-up window using the `ESC` key ([#130](https://github.com/AY2324S1-CS2103T-T14-4/tp/pull/130)).
 
-**<!-- force a page break -->
-<div style="page-break-before:always"></div> **
+<!-- force a page break -->
+<div style="page-break-before:always"></div>
 
 * **New Feature**: Added the ability to sort all events in chronological order ([#120](https://github.com/AY2324S1-CS2103T-T14-4/tp/pull/120)).
   * What it does: The event list displayed is automatically sorted in a way such that users will always see the most upcoming event first.
@@ -57,4 +57,4 @@ To further improve on user experience, I have added the ability to close this po
     * Reported bugs for other teams (examples: [#1](https://github.com/ruo-x/ped/issues/1), [#4](https://github.com/ruo-x/ped/issues/4), [#5](https://github.com/ruo-x/ped/issues/5))
 
 <!-- force a page break -->
-<div style="page-break-before:always"></div> 
+<div style="page-break-before:always"></div>
